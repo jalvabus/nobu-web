@@ -1,0 +1,148 @@
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+  <div class="row mb-3">
+    <div class="col-12">
+      <div class="card shadow h-100 py-2">
+        <div class="card-header py-3 d-flex justify-content-between">
+          <h4 class="m-0 font-weight-bold">Parte Informativo - 55263</h4>
+          <h4 class="m-0 font-weight-bold">Guardia Azul <img src="brand/g_azul.png" width="5%"></h4>
+        </div>
+        <div class="card-body p-4">
+          <div class="row">
+            <div class="col-6">
+              <h4 class="mb-3 font-weight-bold">Datos Generales</h4>
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">H. Reporte</label>
+                    <input type="time" class="form-control" placeholder="H. Reporte">
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">H. Salida</label>
+                    <input type="time" class="form-control" placeholder="H. Salida">
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">H. Llegada</label>
+                    <input type="time" class="form-control" placeholder="H. Llegada">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Unidad</label>
+                    <select class="form-control">
+                      <option>Selecciona</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Conductor</label>
+                    <input type="text" class="form-control" placeholder="Conductor" readonly>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Km. Salida</label>
+                    <input type="number" class="form-control" placeholder="Km. Salida">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Km. Llegada</label>
+                    <input type="number" class="form-control" placeholder="Km. Llegada">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Tipo de Servicio</label>
+                    <select class="form-control">
+                      <option>Selecciona</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <h4 class="mb-3 font-weight-bold">Datos Servicio</h4>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Reporta</label>
+                    <input type="text" class="form-control" placeholder="Reporta">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Telefono</label>
+                    <input type="number" class="form-control" placeholder="Telefono">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Calle</label>
+                    <input type="text" class="form-control" placeholder="Calle">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Colonia</label>
+                    <input type="text" class="form-control" placeholder="Colonia">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">No. Interior</label>
+                    <input type="number" class="form-control" placeholder="No. Interior">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">No. Exterior</label>
+                    <input type="number" class="form-control" placeholder="No. Exterior">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Manzana</label>
+                    <input type="text" class="form-control" placeholder="Manzana">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Comentarios</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <button *ngIf="!cargando" class="btn btn-danger btn-block" (click)="generarReporte()">Generar Parte</button>
+          <div *ngIf="cargando" class="text-center" style="padding-top: 60px;">
+            <img src="assets/img/spinner.gif" width="20%" height="20%">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<!-- /.container-fluid -->
